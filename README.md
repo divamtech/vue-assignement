@@ -11,7 +11,8 @@
 1. Use Vue.js 3 using typescript
 1. Clone repo from https://github.com/divamtech/vue-assignement
 1. Create a branch with your name
-1. Commit small commits, so we can see the commit history. Please avoid one big commit for the entire submission. We would like to see how you approached and went about completing the submission and not just the final result.
+1. Do small commits, so we can see the commit history. Please avoid one big commit for the entire submission. We would like to see how you approached and went about completing the submission and not just the final result.
+1. Push that branch and let us know when you completed.
 
 ### API call:
 
