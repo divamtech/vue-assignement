@@ -409,7 +409,7 @@ curl --location --request GET 'https://api.webledger.in/api/groups' \
 }
 ```
 
-## Addional Points on assignements if:
+## Addional Points on assignments if:
 
 Create a switch button on top right with three options:
 
