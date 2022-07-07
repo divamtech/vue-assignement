@@ -46,7 +46,7 @@ export default Vue.extend({
   computed: {
     indent() {
       const depth = this.depth as number
-      return { marginLeft: `${depth * 20}px` }
+      return { marginLeft: `${depth * 25}px` }
     },
   },
 
@@ -54,5 +54,19 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.tree-menu {
+  padding: 10px;
+}
 
+.label-wrapper {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.label {
+  padding: 0 10px 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1em;
+}
 </style>
