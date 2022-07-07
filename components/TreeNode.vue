@@ -1,6 +1,6 @@
 <template>
   <div class="tree-menu">
-    <div :style="indent" class="label-wrapper">
+    <div :style="indent" class="label-wrapper" @click="toggleChildren">
       <li class="label">
         {{ label }}
       </li>
@@ -49,7 +49,11 @@ export default Vue.extend({
       return { marginLeft: `${depth * 25}px` }
     },
   },
-
+  methods: {
+    toggleChildren() {
+      this.showChildren = !this.showChildren
+    },
+  },
 })
 </script>
 

@@ -22,8 +22,9 @@ export default Vue.extend({
       type: Array as () => Data[],
     },
   },
-  setup() {
+  setup({ data }) {
     const tree = new Tree()
+    data.forEach((value) => tree.add(value))
     return {
       tree,
     }
