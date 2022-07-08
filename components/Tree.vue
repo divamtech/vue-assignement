@@ -24,10 +24,26 @@ export default Vue.extend({
   },
   setup({ data }) {
     const tree = new Tree()
-    data.forEach((value) => tree.add(value))
+    const flattenedData = getFlattenedData(JSON.parse(JSON.stringify(data)))
+    flattenedData.forEach((value) => tree.add(value))
     return {
       tree,
     }
   },
 })
+
+function getFlattenedData(data: Data[], flattenedData: Data[] = []) {
+  data.forEach((item) => {
+    if (item.sub_groups.length) {
+      flattenedData.push({
+        ...item,
+        sub_groups: [],
+      })
+      getFlattenedData(item.sub_groups, flattenedData)
+    } else {
+      flattenedData.push(item)
+    }
+  })
+  return flattenedData
+}
 </script>
