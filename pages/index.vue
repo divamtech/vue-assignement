@@ -19,7 +19,7 @@ export default Vue.extend({
     }
   },
   async asyncData({ $axios }) {
-    const url = BASE_URL + API_ENDPOINTS.GROUPS
+    const url = BASE_URL + API_ENDPOINTS.TREE
     const response = await $axios.$get(url, {
       headers: {
         'Content-Type': 'application/json',
